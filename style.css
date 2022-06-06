@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+/* Variables */
+:root {
+  --button-color-orange: orange;
+  --button-color-lightgrey: #a5a5a5;
+  --button-color-darkgrey: #333333;
+  --button-color-hover: rgb(150, 150, 150);
+}
+
+/* General Settings */
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+}
+body {
+  height: 100vh;
+  background-color: black;
+}
+
+.container {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+
+/* Display Area */
+.display {
+  height: 6.8rem;
+  width: 14.4rem;
+}
+.display_numb {
+  height: 6.8rem;
+  width: 14.4rem;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column-reverse;
+  font-size: 3rem;
+  color: white;
+  padding-bottom: 0.75rem;
+  padding-inline-end: 0.75rem;
+}
+
+/* Gird System for the typing Field */
+.type-area {
+  display: grid;
+  grid-template-rows: 3rem 3rem 3rem 3rem 3rem;
+  grid-template-columns: 3rem 3rem 3rem 3rem;
+  grid-gap: 0.8rem;
+  text-align: center;
+}
+
+/* to make the 0 button extra wide with Grid */
+.zero {
+  grid-row-start: 5;
+  grid-row-end: 5;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  border-radius: 2.3rem;
+  color: white;
+  padding-right: 3.9rem;
+  background-color: var(--button-color-darkgrey);
+}
+
+.numb,
+.sign,
+.math-sign,
+.zero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+}
+
+.numb:hover,
+.sign:hover,
+.math-sign:hover,
+.zero:hover {
+  background-color: var(--button-color-hover);
+  opacity: 70%;
+  transition: 600ms;
+}
+
+.numb,
+.sign,
+.math-sign {
+  border-radius: 50%;
+}
+
+.numb,
+.math-sign {
+  color: white;
+}
+
+.sign {
+  background-color: var(--button-color-lightgrey);
+}
+.numb {
+  background-color: var(--button-color-darkgrey);
+}
+.math-sign {
+  background-color: var(--button-color-orange);
+}

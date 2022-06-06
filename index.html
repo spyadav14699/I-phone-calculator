@@ -1,9 +1,40 @@
-<html>
-    <title>welcome</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
 <body>
-    <center>
-        <h1> welcome to surya page 1</h1>
-        <button>go to the page</button>
-    </center>
+    <div class="container">
+        <div class="display">
+          <span class="display_numb" id="display_area">0</span>
+        </div>
+      
+        <div class="type-area">
+          <div class="sign" id="ac_switch" onclick="resetDisplay()">AC</div>
+          <div class="sign">+/-</div>
+          <div class="sign">%</div>
+          <div class="math-sign" onclick="pushSign(` / `)">÷</div>
+          <div class="numb" onclick="pushSign(7)">7</div>
+          <div class="numb" onclick="pushSign(8)">8</div>
+          <div class="numb" onclick="pushSign(9)">9</div>
+          <div class="math-sign" onclick="pushSign(` * `)">x</div>
+          <div class="numb" onclick="pushSign(4)">4</div>
+          <div class="numb" onclick="pushSign(5)">5</div>
+          <div class="numb" onclick="pushSign(6)">6</div>
+          <div class="math-sign" onclick="pushSign(` - `)">-</div>
+          <div class="numb" onclick="pushSign(1)">1</div>
+          <div class="numb" onclick="pushSign(2)">2</div>
+          <div class="numb" onclick="pushSign(3)">3</div>
+          <div class="math-sign" onclick="pushSign(` + `)">+</div>
+          <div class="zero" onclick="pushSign(0)">0</div>
+          <div class="numb" onclick="pushSign(`.`)">,</div>
+          <div class="math-sign" onclick="calcDisplay()">=</div>
+        </div>
+      </div> 
 </body>
-    </html>
+</html>
+<script src="./index.js"></script>
